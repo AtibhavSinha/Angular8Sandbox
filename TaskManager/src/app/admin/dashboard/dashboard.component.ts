@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { DashboardService } from './service/dashboard.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
-
+export class DashboardComponent implements OnInit
+{
   Designation: string;
   Username: string;
   NoOfTeamMembers: number;
@@ -24,10 +25,12 @@ export class DashboardComponent implements OnInit {
   TeamMembersSummary = [];
   TeamMembers = [];
 
-  constructor() { }
+  constructor(private dashboardService: DashboardService )
+  {
+  }
 
-  ngOnInit() {
-
+  ngOnInit()
+  {
     this.Designation = "Team Leader";
     this.Username = "Scott Smith";
     this.NoOfTeamMembers = 67;
@@ -51,12 +54,7 @@ export class DashboardComponent implements OnInit {
       this.Years.push(i);
     }
 
-    this.TeamMembersSummary = [
-      { Region: "East", TeamMembersCount: 20, TemporarilyUnavailableMembers: 4 },
-      { Region: "West", TeamMembersCount: 15, TemporarilyUnavailableMembers: 8 },
-      { Region: "South", TeamMembersCount: 17, TemporarilyUnavailableMembers: 1 },
-      { Region: "North", TeamMembersCount: 15, TemporarilyUnavailableMembers: 6 }
-    ];
+    this.TeamMembersSummary = this.dashboardService.getTeamMembersSummary();
 
 
     this.TeamMembers = [
@@ -93,7 +91,6 @@ export class DashboardComponent implements OnInit {
         ]
       }
     ];
-
   }
 
   onProjectChange($event)
@@ -123,5 +120,4 @@ export class DashboardComponent implements OnInit {
       this.AvailableFunds = 883;
     }
   }
-
 }

@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "projectID": 1,
+      "projectName": "Front Office Management",
+      "dateOfStart": "15-02-2020",
+      "teamSize": 10
+    },
+    {
+      "id": 2,
+      "projectID": 2,
+      "projectName": "Reporting Tool",
+      "dateOfStart": "15-02-2020",
+      "teamSize": 5
+    },
+    {
+      "id": 3,
+      "projectID": "3",
+      "projectName": "abc proj",
+      "dateOfStart": "2020-01-28",
+      "teamSize": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment2 ",
+      "postId": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

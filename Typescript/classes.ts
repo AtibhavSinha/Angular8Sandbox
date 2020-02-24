@@ -1,4 +1,4 @@
-class Employee
+class EmployeeClass
 {
     employeeName: string;
     salary: number;
@@ -28,8 +28,8 @@ class Employee
 }
 
 //Objects
-var emp1 : Employee;
-emp1 = new Employee();
+var emp1 : EmployeeClass;
+emp1 = new EmployeeClass();
 emp1.employeeName = "John";
 emp1.salary = 8000;
 emp1.isActive = true;
@@ -39,8 +39,8 @@ console.log(emp1.salary);
 console.log(emp1.isActive);
 console.log(emp1.getNetSalary());
 
-var emp2 : Employee;
-emp2 = new Employee();
+var emp2 : EmployeeClass;
+emp2 = new EmployeeClass();
 emp2.employeeName = "Miller";
 emp2.salary = 17000;
 emp2.isActive = true;
@@ -50,8 +50,8 @@ console.log(emp2.salary);
 console.log(emp2.isActive);
 console.log(emp2.getNetSalary());
 
-var emp3 : Employee;
-emp3 = new Employee();
+var emp3 : EmployeeClass;
+emp3 = new EmployeeClass();
 emp3.employeeName = "Jones";
 emp3.salary = 5600;
 emp3.isActive = false;
